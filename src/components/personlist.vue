@@ -8,7 +8,6 @@
 
 <script>
 
-import jsonlist from '../persons.json'
 
 export default {
   name: 'page-auth',
@@ -16,7 +15,6 @@ export default {
   data () {
     return {
       msg: 'Welcome to Personlist',
-      list: jsonlist
     }
   }
 }

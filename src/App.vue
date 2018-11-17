@@ -1,40 +1,46 @@
 <template>
   <div class="container" id="app">
+    <app-navigation></app-navigation>
     <img class="logo" src="./assets/logo.png">
-    <div>
+    <!-- <div>
         <hr>
         <span>DATA From outer json is below</span>
         <hr>
         <div v-for="data in myJSON" :key="data[0]">{{data}}</div>
-        <hr>
-        <button class="btn">CLICK TO MODIFY JSON</button>
-    </div>
+        <br>             
+    </div> -->
     <router-view/>
   </div>
 </template>
 
 <script>
-import outerJSON from './persons.json'
+
+import outerJSON from './persons.json';
+
+import navigation from './components/navigation.vue';
+import auth from './components/auth.vue';
+import HelloWorld from './components/HelloWorld.vue';
+import newperson from './components/newperson.vue';
+import personlist from './components/personlist.vue';
+
 
 export default {
   name: 'App',
+  components: {
+    "app-navigation": navigation,
+    "app-auth": auth,
+    "app-testpage": HelloWorld,
+    "app-new-person": newperson,
+    "app-person-list": personlist
+  },
   data() {
     return {
       someData: 'Hello from parent component!',
       myJSON: outerJSON
     }
   }
-  // methods: {
-  //   updateJSON: () => {
-  //       let modJson = JSON.parse(this.outerJSON);
-  //       console.log(this.myJSON);
-  //       //this.myJSON.push({firstName: 'Иван', lastName: 'Петров', age: 30})
-  //   }
-  // }
- 
+  
 }
- 
-
 </script>
 
 <style>
@@ -44,6 +50,9 @@ body {
   box-sizing: border-box;
   background: rgb(173, 241, 210);
   border-color: #35495e;
+}
+ul > li {
+  list-style-type: none; 
 }
 .container {
   max-width: 640px;
