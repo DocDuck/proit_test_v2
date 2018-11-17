@@ -1,5 +1,8 @@
 <template>
-  <h1>Auth Page</h1>
+  <div class="login">
+        <h1>Auth Page</h1>
+        <p>{{msg}}</p>        
+    </div>   
     
 </template>
 
@@ -8,7 +11,7 @@ export default {
   name: 'page-auth',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Auth Page'
     }
   }
 }

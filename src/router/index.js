@@ -10,7 +10,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/auth',
       name: 'page-auth',
       component: Auth
     },
@@ -25,7 +25,7 @@ export default new Router({
       component: PersonList
     },
     {
-      path: '/hello',
+      path: '/',
       name: 'HelloWorld',
       component: HelloWorld
     }
