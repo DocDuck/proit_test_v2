@@ -1,18 +1,40 @@
 <template>
   <div class="container" id="app">
     <img class="logo" src="./assets/logo.png">
+    <div>
+        <hr>
+        <span>DATA From outer json is below</span>
+        <hr>
+        <div v-for="data in myJSON" :key="data[0]">{{data}}</div>
+        <hr>
+        <button class="btn">CLICK TO MODIFY JSON</button>
+    </div>
     <router-view/>
   </div>
 </template>
 
 <script>
+import outerJSON from './persons.json'
 
 export default {
   name: 'App',
   data() {
-    return 
+    return {
+      someData: 'Hello from parent component!',
+      myJSON: outerJSON
+    }
   }
+  // methods: {
+  //   updateJSON: () => {
+  //       let modJson = JSON.parse(this.outerJSON);
+  //       console.log(this.myJSON);
+  //       //this.myJSON.push({firstName: 'Иван', lastName: 'Петров', age: 30})
+  //   }
+  // }
+ 
 }
+ 
+
 </script>
 
 <style>
