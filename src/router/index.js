@@ -12,22 +12,26 @@ export default new Router({
     {
       path: '/auth',
       name: 'page-auth',
-      component: Auth
+      component: Auth,
+      props: true
     },
     {
       path: '/new',
       name: 'page-new-person',
-      component: NewPerson
+      component: NewPerson,
+      props: true
     },
     {
       path: '/list',
       name: 'page-person-list',
-      component: PersonList
+      component: PersonList,
+      props: true
     },
     {
       path: '/',
       name: 'HelloWorld',
-      component: HelloWorld
+      component: HelloWorld,
+      props: true
     }
   ]
 })
