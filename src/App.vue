@@ -2,13 +2,7 @@
   <div class="container" id="app">
     <app-navigation></app-navigation>
     <img class="logo" src="./assets/logo.png">
-    <!-- <div>
-        <hr>
-        <span>DATA From outer json is below</span>
-        <hr>
-        <div v-for="data in myJSON" :key="data[0]">{{data}}</div>
-        <br>             
-    </div> -->
+    <app-test-page :parentData="someData"></app-test-page>
     <router-view/>
   </div>
 </template>
@@ -17,6 +11,7 @@
 
 import outerJSON from './persons.json';
 
+import test from './components/test.vue';
 import navigation from './components/navigation.vue';
 import auth from './components/auth.vue';
 import HelloWorld from './components/HelloWorld.vue';
@@ -29,7 +24,7 @@ export default {
   components: {
     "app-navigation": navigation,
     "app-auth": auth,
-    "app-testpage": HelloWorld,
+    "app-test-page": test,
     "app-new-person": newperson,
     "app-person-list": personlist
   },
