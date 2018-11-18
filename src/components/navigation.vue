@@ -1,7 +1,6 @@
 <template>
     <nav>
         <ul>
-            <li><router-link to="/">Home</router-link></li>
             <li><router-link to="/auth">Login</router-link></li>
             <li><router-link to="/list">Person List</router-link></li>
             <li><router-link to="/new">New Person</router-link></li>

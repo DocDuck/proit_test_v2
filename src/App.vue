@@ -78,4 +78,45 @@ ul > li {
   color: #2c3e50;
   margin: auto;
 }
+h1 {
+  margin-bottom: 2.5rem;
+}
+.form-test {
+	margin: 1rem;
+	padding: 1rem;
+  background: rgb(185, 228, 231);
+  box-shadow: 1px 1px 32px 1px rgba(44,62,5,0.62);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-test_auth {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.form-test > .input {
+	margin-bottom: 15px;
+}
+
+.form-test > .label {
+	color: #2c3e50;
+	font-size: 12px;
+	display: block;
+	margin-bottom: 5px;
+}
+.form-test > .error {
+	margin: 0.2rem 0;
+	font-size: 0.8rem;
+	color: rgb(201, 38, 13);
+}
+.form-test > .input {
+	padding: 0.3rem 1rem;
+	border: 1px solid #CCCCCC;
+	outline: none;
+	
+}
 </style>

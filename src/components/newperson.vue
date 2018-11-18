@@ -19,7 +19,6 @@
 
 <script>
 export default {
-  props: ['userlist'],
   name: 'page-new-person',
   data () {
     return {
@@ -41,61 +40,6 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1 {
-  margin-bottom: 2.5rem;
-}
-.form__layout{
-	position: absolute;
-	width: 100vw;
-	height: 100vh;
-	background-color: rgb(68, 160, 96);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	overflow: hidden;	
-}
-
-.form-test {
-	margin: 1rem;
-	padding: 1rem;
-  background: rgb(185, 228, 231);
-  box-shadow: 1px 1px 32px 1px rgba(44,62,5,0.62);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.form-test_auth {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-}
-
-.form-test > .input {
-	margin-bottom: 15px;
-}
-
-.form-test > .label {
-	color: #2c3e50;
-	font-size: 12px;
-	display: block;
-	margin-bottom: 5px;
-}
-.form-test > .error {
-	margin: 0.2rem 0;
-	font-size: 0.8rem;
-	color: rgb(201, 38, 13);
-}
-.form-test > .input {
-	padding: 0.3rem 1rem;
-	border: 1px solid #CCCCCC;
-	outline: none;
-	
-}
-
-
+<style>
 
 </style>
