@@ -7,6 +7,7 @@ export default new Vuex.Store({
   state: {
     persons: [
       {
+        'id': '1',
         'fio': 'Ivanov Ivan Ivanovich',
         'birth': '33331333',
         'address': 'address1',
@@ -15,6 +16,7 @@ export default new Vuex.Store({
         'isAdmin': false
       },
       {
+        'id': '2',
         'fio': 'Petrov Petr Petrovich',
         'birth': '33331333',
         'address': 'address2',
@@ -23,6 +25,7 @@ export default new Vuex.Store({
         'isAdmin': true
       },
       {
+        'id': '3',
         'fio': 'Sidorov Sidor Sidorovich',
         'birth': '33331333',
         'address': 'address3',

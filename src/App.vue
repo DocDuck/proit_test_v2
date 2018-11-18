@@ -2,7 +2,7 @@
   <div class="container" id="app">
     <app-navigation></app-navigation>
     <img class="logo" src="./assets/logo.png">
-    <app-test-page :parentData="someData"></app-test-page>
+    <!-- <app-test-page :parentData="someData"></app-test-page> -->
     <router-view/>
   </div>
 </template>
@@ -35,10 +35,10 @@ export default {
     }
   },
   methods: {
-    updatePersons(newDude){
-      this.persons.push(newDude);
-      console.log(this.persons);
-    }
+    // updatePersons(newDude){
+      //this.persons.push(newDude); уже не надо. так как подрубил vuex
+      //console.log(this.persons);
+    //}
   }
   
 }
