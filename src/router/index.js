@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-//import HelloWorld from '@/components/HelloWorld'
+// import HelloWorld from '@/components/HelloWorld'
 import Auth from '@/components/auth'
 import NewPerson from '@/components/newperson'
 import PersonList from '@/components/personlist'
@@ -12,20 +12,21 @@ export default new Router({
     {
       path: '/auth',
       name: 'page-auth',
-      component: Auth,
-      props: true
+      component: Auth
+
     },
     {
       path: '/new',
       name: 'page-new-person',
       component: NewPerson,
-      props: true
+      meta: {requiresAuth: true, adminAuth: true, residentAuth: false}
+
     },
     {
       path: '/list',
       name: 'page-person-list',
       component: PersonList,
-      props: true
+      meta: {requiresAuth: false, adminAuth: true, residentAuth: true}
     }
     // {
     //   path: '/',

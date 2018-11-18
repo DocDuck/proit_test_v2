@@ -1,8 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2>Testing Page</h2>
-        
+    <h2>Testing Page</h2>        
     <div>
         <hr>
         <h2>Lets take some parent Data</h2>
@@ -12,9 +11,7 @@
         <h2>Now Its From Parent JSON</h2>
         <div v-for="data in myJSON" :key="data">{{data}}</div>
         <hr>  -->
-    </div>
-
-    
+    </div>    
   </div>
 </template>
 

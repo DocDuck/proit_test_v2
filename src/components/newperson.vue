@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  //props: ['userlist'],
+  props: ['userlist'],
   name: 'page-new-person',
   data () {
     return {
@@ -28,17 +28,23 @@ export default {
   },
   methods: {
     addPerson(e){
-      //this.userlist.push(this.newPerson);
-      //this.$emit('add-new-person', this.newPerson);     
+      //this.userlist.push(this.newPerson); - должно сработать без $emit так как юзерлист это не примитив а ссылочный тип данных
+      /*this.$emit('add-new-person', this.newPerson); создаём ивент который отправит нового юзера в рут компонент*/
+      this.$store.commit('addDude', this.newPerson);     
       console.log(JSON.stringify(this.newPerson));
-      console.log(this.userlist);                    
+      //console.log(JSON.stringify(this.$store.state.persons));
+
+                
     }
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style scoped>
+h1 {
+  margin-bottom: 2.5rem;
+}
 .form__layout{
 	position: absolute;
 	width: 100vw;
@@ -55,6 +61,7 @@ export default {
 	margin: 1rem;
 	padding: 1rem;
   background: rgb(185, 228, 231);
+  box-shadow: 1px 1px 32px 1px rgba(44,62,5,0.62);
   display: flex;
   flex-direction: column;
   align-items: center;

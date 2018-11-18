@@ -34,5 +34,11 @@ export default new Vuex.Store({
         'isAdmin': false
       }
     ]
+  },
+  mutations: {
+    addDude (state, payload) {
+      state.persons.push(payload)
+    }
   }
+
 })
