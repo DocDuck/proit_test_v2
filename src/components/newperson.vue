@@ -3,15 +3,15 @@
     <h1>New Person Page</h1>
     <form class="form-test">
       <label class="label" for="input-fio">Введите ваше ФИО</label>
-      <input class="input input-fio" type="text" v-model="newUser.fio"/>
+      <input class="input input-fio" type="text" v-model="newPerson.fio"/>
       <!-- <div class="error" v-show="email &amp;&amp; !isEmailValid"><span>Неправильный email </span><i class="ion-alert-circled"></i></div> -->
       <label class="label" for="input-birth">Введите вашу дату рождения</label>
-      <input class="input input-birth" type="text" v-model="newUser.birth"/>
+      <input class="input input-birth" type="text" v-model="newPerson.birth"/>
       <!-- <div class="error" v-show="email &amp;&amp; !isEmailValid"><span>Неправильный email </span><i class="ion-alert-circled"></i></div> -->
       <label class="label" for="input-address">Введите ваш адрес</label>
-      <input class="input input-address" type="text" v-model="newUser.address"/>
+      <input class="input input-address" type="text" v-model="newPerson.address"/>
       <!-- <div class="error" v-show="email &amp;&amp; !isEmailValid"><span>Неправильный email </span><i class="ion-alert-circled"></i></div> -->
-      <button class="btn btn-success" type="button" @click = 'addUser' >OK</button>
+      <button class="btn btn-success" type="button" @click = 'addPerson' >OK</button>
     </form>
   </div>
     
@@ -19,17 +19,19 @@
 
 <script>
 export default {
+  //props: ['userlist'],
   name: 'page-new-person',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
-      newUser: {}
+      newPerson: {}
     }
   },
   methods: {
-    addUser(){
-      //this.userList.push('');        
-      console.log(JSON.stringify(this.newUser));                    
+    addPerson(e){
+      //this.userlist.push(this.newPerson);
+      //this.$emit('add-new-person', this.newPerson);     
+      console.log(JSON.stringify(this.newPerson));
+      console.log(this.userlist);                    
     }
   }
 }

@@ -2,7 +2,7 @@
     <div class="personlist">
         <h1>Person List Page</h1>
         <p>{{msg}}</p>
-        <p>{{list}}</p>
+        <p>{{persons}}</p>
     </div>      
 </template>
 
@@ -11,12 +11,16 @@
 
 export default {
   name: 'page-auth',
-  props: ['list'],
   data () {
     return {
       msg: 'Welcome to Personlist',
     }
-  }
+  },
+  computed: {
+      persons() {
+          return this.$store.state.persons;
+      }
+    }
 }
 </script>
 
