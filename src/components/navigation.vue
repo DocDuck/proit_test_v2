@@ -4,6 +4,7 @@
             <li><router-link to="/auth">Login</router-link></li>
             <li><router-link to="/list">Person List</router-link></li>
             <li><router-link to="/new">New Person</router-link></li>
+            <span v-if="isLoggedIn"> | <a @click="logOut">Выйти</a></span>
         </ul>
         <hr>
     </nav>      
@@ -18,7 +19,21 @@ export default {
   data () {
     return {
     }
+  },
+  computed: {
+      isLoggedIn: () => {this.$store.getters.isLoggedIn}
+  },
+  
+  methods: {
+      logOut: () => {
+
+        this.$store.dispatch('logOut')
+        .then( () => { this.$router.push('/auth') } )
+
+      }
   }
+
+
 }
 </script>
 

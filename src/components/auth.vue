@@ -4,11 +4,11 @@
       <div class="form__wrapper">
         <h1>Auth Page</h1>
         <form class="form-test">
-          <label class="label" for="input-fio">Логин</label>
+          <label class="label">Логин</label>
           <input class="input" type="text" v-model="person.login"/>
           <!-- <div class="error" v-show="email &amp;&amp; !isEmailValid"><span>Неправильный email </span><i class="ion-alert-circled"></i></div> -->
-          <label class="label" for="input-birth">Пароль</label>
-          <input class="input" type="text" v-model="person.pass"/>
+          <label class="label">Пароль</label>
+          <input class="input" type="password" v-model="person.pass"/>
           <!-- <div class="error" v-show="email &amp;&amp; !isEmailValid"><span>Неправильный email </span><i class="ion-alert-circled"></i></div> -->
           <button class="btn btn-success" type="submit" @click.prevent = 'auth' >Войти</button>
           <button class="btn btn-success" type="button" @click = 'guest' >Гостевой вход</button>
@@ -27,6 +27,18 @@ export default {
       person: {}
     }
   },
+  methods: {
+    auth() {
+      let log = this.person.login
+      let pass = this.person.pass
+
+      this.$store.dispatch('auth', { log, pass })
+      .then(() => this.$router.push('/'))
+      .catch(err => console.log(err))
+
+
+    }
+  }
 }
 </script>
 
